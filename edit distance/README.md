@@ -30,3 +30,8 @@ b = "搿只苹果老酸个"
 - The edit distance ratio is acquired by dividing the total length of the two strings with all the deletion and addition edits. <br>
   - For above example, total edits = 3 "-" + 4 "+" = 7, total length of two strings is 6 + 7 = 13, so the edit distance ratio is 7/13 = 0.53846154 which means it needs half of the characters edits to change string a to string b. The largest ratio will be 1.0 when the two strings are totally different and all characters have to be either deleted or added. And the smallest ratio is 0.0 when the two strings are the same and there are no edits.
 - To choose to use edit distance ratio instead of similarity ratio is just an intuitive decision considering that the dialects being delt with(especially Cantonese) are more different than similiar to each other.
+- The edit distance ratios of 140 sentence pairs of each two languages are randomly sampled 1000 times for plotting.
+
+## Distribution Results(mean, median, standard deviation)
+- Cantonese(yue) is most distinct from Mandarin(cmn). Wenzhounese(wen) and Shanghainese(wuu) have very close edit ratio distributions to Mandarin(cmn), with wen showing slightly more small values of ratios in the distribution.
+- Comparing among wen, wuu and yue, we can clearly see that wen and wuu are closest to each other(least edit ratio), but interestingly that wen appears to be less distant from yue than wuu.

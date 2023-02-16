@@ -26,7 +26,7 @@ b = "搿只苹果老酸个"
     酸
   + 个
 ```
-- The subsitution is self-extracted from the returns of *ndiff* in the function *get_each_edit* which finds the deletions and additions between matching characters and pair them up as susbstituions like in above case "这个" with "搿只", "很" with "老".
+- The subsitution is self-extracted from the returns of *ndiff* in the function *get_each_edit* which finds the deletions and additions between matching characters and pair them up as susbstituions like in above case "这个" with "搿只", "很" with "老". The subsitutions actually show very good alignments of the two languages.
 - The edit distance ratio is acquired by dividing the total length of the two strings with all the deletion and addition edits. <br>
   - For above example, total edits = 3 "-" + 4 "+" = 7, total length of two strings is 6 + 7 = 13, so the edit distance ratio is 7/13 = 0.53846154 which means it needs half of the characters edits to change string a to string b. The largest ratio will be 1.0 when the two strings are totally different and all characters have to be either deleted or added. And the smallest ratio is 0.0 when the two strings are the same and there are no edits.
 - To choose to use edit distance ratio instead of similarity ratio is just an intuitive decision considering that the dialects being delt with(especially Cantonese) are more different than similiar to each other.

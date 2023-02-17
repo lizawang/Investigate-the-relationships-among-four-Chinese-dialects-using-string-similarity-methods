@@ -38,4 +38,4 @@ b = "搿只苹果老酸个"
 ## Distribution Results(mean, median, standard deviation)
 - Cantonese(yue) is most distinct from Mandarin(cmn). Wenzhounese(wen) and Shanghainese(wuu) have very close edit ratio distributions to Mandarin(cmn), with wen showing slightly more small values of ratios in the distribution.
 - Comparing among wen, wuu and yue, we can clearly see that wen and wuu are closest to each other(the least edit ratio), but interestingly that wen appears to be less distant from yue than wuu.
-- What's also interesting to find is that the distances between wen, wuu and yue are further than their distances to cmn. They are all closest to Mandarin than to each other.
+- What's also interesting to find is that the distances between wen, wuu and yue are further than their distances to cmn. They are all closer to Mandarin than to each other except that wen and wuu are closer than yue with cmn.

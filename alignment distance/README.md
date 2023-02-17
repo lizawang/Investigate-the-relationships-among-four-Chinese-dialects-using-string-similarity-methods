@@ -49,7 +49,7 @@ Sentence Alignment:  13
 呒没多少人-垃海
 score: 0.28031292650848627 
 ```
-- The length difference of the two sentences have big impact on the final similarity score.
+- The length difference of the two sentences has big impact on the final similarity score.
 
 ```
 Sentence Alignment:  119

@@ -1,1 +1,12 @@
-
+# [Needleman-Wunsh Alignment](https://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm)
+## Match/mismatch scoring
+- Cosine similarity is applied upon the characters in the strings/sentences using the pretrained Mandarin character vectors from [fasttext](https://fasttext.cc/docs/en/crawl-vectors.html).
+- For the characters that are not in the pretrained model, it will return a vector of all 0 which causes "divide by 0 error" when computing the cosine simialrity. To avoid this, a random value between -1 and 1 (including 1 and -1) with interval 0.1 is drawn each run time for characters with a vector of 0. (For this reason, 𠲎 is changed into 伐 in both Shanghainese and Wenzhounese because the former character doesn't exist in modern Mandarin.)
+- The benefit of using cosine similarity instead of using just fixed values for matching and mismatching is that it provides a value for every character pair based on how similar their context vector is. So that 你 ('you' in Mandarin) and 侬 ('you' in Shanghainese) get a higher matching score than 你 ('you' in Mandarin) and 是 ('be' in both Mandarin and Shanghainese).
+## Gap penalty
+- It is set to 0 to make sure that the alignment is fully imposed by the characters' cosine similarity values (-1 to 1). <br>
+- In this way, the two strings align along the characters that have highest cosine similarities (the same characters that two sentences share). 
+- And only when two characters have the negative cosine similarity, gap will apply (0 > negative values).
+## Final alignment distance score for each sentence pair
+- Each sentence alignment distance score is normalized by the aligned sentence length.
+- The values are between 

@@ -12,6 +12,7 @@
 Sentence Alignment:  124
 不要玩钥匙-----
 ---钥匙孛相勿来个
+
 Sentence Alignment:  109
 随时问任何问题都可以-
 -有---问题就问好唻
@@ -22,6 +23,7 @@ Why extra "-"? Why not just "为什么-" with "啥个道理" or "-为什么" wit
 Sentence Alignment:  19
 她昨天为什么--不来
 伊昨日-啥个道理勿来
+
 Sentence Alignment:  91
 我年轻的时候-常常去打棒球
 我年轻个-辰光常常去打棒球
@@ -29,11 +31,29 @@ Sentence Alignment:  91
 ## Final alignment similarity score for each sentence pair
 - Each sentence alignment similarity score is normalized by the aligned sentence length (after gap symbol '-' is added).
 - The values are between -1 (theoritically when all character pairs have cosine similarity -1) and 1 (when the shorter sentence is aligned with the longer sentence with all identical characters or two sentences are totally identical.)
-- But the result shows that even the totally different two sentences (even with different word order), the normalized similarity score is above 0.
+- But the result of Mandarin and Shanghainese shows that even the totally different two sentences (even with different word order), the normalized similarity score is above 0.
 
 ```
 Sentence Alignment:  1
 --那又怎样
 哏末哪能呢-
 score: 0.2766460080941518 
+
+Sentence Alignment:  106
+走开
+滚蛋
+score: 0.21459350734949112
+
+Sentence Alignment:  13
+参加的-人并不多
+呒没多少人-垃海
+score: 0.28031292650848627 
+```
+- The length difference of the two sentences have big impact on the final similarity score.
+
+```
+Sentence Alignment:  119
+安静----
+-静一点好伐
+score: 0.16666666666666666
 ```

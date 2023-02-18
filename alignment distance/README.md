@@ -6,7 +6,7 @@
 - The benefit of using cosine similarity instead of using just fixed values for matching and mismatching is that it provides a value for every character pair based on how similar their context vector is. So that 你 ('you' in Mandarin) and 侬 ('you' in Shanghainese) get a higher matching score than 你 ('you' in Mandarin) and 伐 (genetive in Shanghainese).
 ## Gap penalty
 - It is set to 0 to make sure that the alignment is fully imposed by the characters' cosine similarity values (-1 to 1). <br>
-- In this way, the two strings align along the characters that have highest cosine similarities (the same characters that two sentences share). 
+- In this way, the two strings align along the characters that have highest cosine similarities (often 1.0, from the identical characters that two sentences share). 
 
 ```
 Sentence Alignment:  124
@@ -17,7 +17,7 @@ Sentence Alignment:  109
 随时问任何问题都可以-
 -有---问题就问好唻
 ```
-- The rest is also aligned by cosine similarity value from large to small. <br>
+- The rest is also aligned by cosine similarity value from large to small recursivly. <br>
 Why extra "-"? Why not just "为什么-" with "啥个道理" or "-为什么" with "啥个道理"? Because "啥" has the higher similairty score with "什" than "为". The same reason for the second example because "辰" has a much higher similairty score with "候" than "时".
 ```
 Sentence Alignment:  19
@@ -31,7 +31,7 @@ Sentence Alignment:  91
 ## Final alignment similarity score for each sentence pair
 - Each sentence alignment similarity score is normalized by the aligned sentence length (after gap symbol '-' is added).
 - The values are between -1 (theoritically when all character pairs have cosine similarity -1) and 1 (when the shorter sentence is aligned with the longer sentence with all identical characters or two sentences are totally identical.)
-- But the result of Mandarin and Shanghainese shows that even the totally different two sentences (even with different word order), the normalized similarity score is above 0.
+- But the results show that even the totally different two sentences (even with different word order), the normalized similarity score is above 0. The examples below are from cmn and wuu.
 
 ```
 Sentence Alignment:  1
@@ -49,7 +49,7 @@ Sentence Alignment:  13
 呒没多少人-垃海
 score: 0.28031292650848627 
 ```
-- The length difference of the two sentences has big impact on the final similarity score.
+- The length difference of the two sentences has big impact on the final similarity score (because it is got by dividing the aligned length which is at least the length of the longer sentence/string).
 
 ```
 Sentence Alignment:  119

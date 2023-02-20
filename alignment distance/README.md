@@ -65,11 +65,10 @@ score: 0.16666666666666666
 ```
 ## Data preprocessing
 - Data are Mandarin (cmn) with three dialects: Shanghainese(wuu), Wenzhounese(wen) and Cantonese(yue).
-- The following punctuation and numbers are removed.
+- The following punctuation are removed.
 
 ```
  punc = ["。", "，", "！", "？", "'", "\"", ",", ".", "、", "?", "「", "」"]
- num = "0123456789"
 ```
 ## 1000 times Sampling with replacement
 - Each language pairs' sentence alignment similairty scores are fully (the length of all sentence pairs) sampled 1000 times with replacement. 1000 averaged (across all sentence pairs) aligned similarity scores of each language pair is collected and plotted with continuous probability density function from [seaborn](https://seaborn.pydata.org/generated/seaborn.kdeplot.html).

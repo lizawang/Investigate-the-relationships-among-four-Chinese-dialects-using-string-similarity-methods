@@ -8,9 +8,8 @@ This algorithm tries to find the longest matching pattern/characters.<br>
 - The advantage of this algorithm is that it can find the matching character of the second string that is not aligned with that of the first string in the same position.
 
 ## Some Details:
-- Punctuation and numbers are removed from strings.
+- Punctuation are removed from strings.
   - punc = ["。", "，", "！", "？", "'", "\"", ",", ".", "、", "?", "「", "」"]
-  - num = "0123456789"
 - *ndiff* doesn't return the minimum edit steps. Instead it returns double edit steps.
 It has no subsitution edits but only edit steps with "-" for deletion, "+" for addition, and " " for matching, as following: <br>
 (changing sentence a into sentence b) <br>

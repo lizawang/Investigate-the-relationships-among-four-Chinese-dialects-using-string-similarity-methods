@@ -1,4 +1,4 @@
 # Positioning-of-Wenzhounese-in-Chinese-Southern-dialects
 ## Data
-- All chinese traditional characters are converted into simplified ones using [chinese-converter](https://github.com/zachary822/chinese-converter).
+- Data is run over [chinese-converter](https://github.com/zachary822/chinese-converter) to convert chinese traditional characters into their simplified correspondents. (except some of traditional cantonese characters are not converted.)
 - All punctuation are removed.

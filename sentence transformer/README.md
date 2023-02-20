@@ -11,7 +11,7 @@ sen_2 = model.encode(["我你"], convert_to_tensor= True)
 cosine_score = util.cos_sim(sen_1, sen_2)
 ```
 ## Data
-To keep consistency with other methods, the punctuation and numbers are removed as well for this method. Although, given it's sentence level, punctuation might make a difference.
+To keep consistency with other methods, the punctuation are removed as well for this method. Although, given it's sentence level, punctuation might make a difference.
 
 ## Results
 - First thing to notice is that the sentence cosine similarity scores are systematically higher than the ones we get from Needleman-Wunsch alignment with cosine similarity. The later are on average between 0.5 and 0.6, while the former the values within two standard derivations (~96%) of all language pairs are above 0.9.

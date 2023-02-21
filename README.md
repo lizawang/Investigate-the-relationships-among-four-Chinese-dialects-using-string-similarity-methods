@@ -1,7 +1,7 @@
 # Positioning-Wenzhounese-in-Chinese-Southern-dialects
 Where does Wenzhounese stand? <br>
-What makes a dialect dialect and different from Mandarin? <br>
-What makes each dialect different from others? <br>
+What makes a dialect dialect and different from Mandarin lexically? <br>
+What makes each dialect different from others lexically? <br>
 
 ## Data 
 - File name is "cmn-yue-wuu-wen-parallel-simplified_final" and uploaded here.

@@ -12,7 +12,7 @@ The unknown characters for the model in each dialect:
 - The benefit of using cosine similarity instead of using just fixed values for matching and mismatching is that it provides a value for every character pair based on how similar their context vector is. So that 你 ('you' in Mandarin) and 侬 ('you' in Shanghainese) get a higher matching score than 你 ('you' in Mandarin) and 伐 (genetive in Shanghainese).
 ## Gap penalty
 - It is set to 0 to make sure that the alignment is fully imposed by the characters' cosine similarity values (-1 to 1). <br>
-- In this way, the two strings align along the characters that have highest cosine similarities (often 1.0, from the identical characters that two sentences share). 
+- In this way, the two strings align along the longest character substring that have highest cosine similarities (often 1.0, from the identical characters that two sentences share). 
 
 ```
 Sentence Alignment:  124
@@ -23,7 +23,7 @@ Sentence Alignment:  109
 随时问任何问题都可以-
 -有---问题就问好唻
 ```
-- The rest is also aligned by cosine similarity value from large to small recursivly. <br>
+- The rest is also aligned by the longest substring by their cosine similarity value from large to small recursivly. <br>
 Why extra "-"? Why not just "为什么-" with "啥个道理" or "-为什么" with "啥个道理"? Because "啥" has the higher similairty score with "什" than "为". The same reason for the second example because "辰" has a much higher similairty score with "候" than "时".
 ```
 Sentence Alignment:  19

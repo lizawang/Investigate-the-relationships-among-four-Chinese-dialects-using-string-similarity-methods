@@ -64,7 +64,7 @@ Sentence Alignment:  119
 score: 0.16666666666666666
 ```
 ## Data preprocessing
-- Data are Mandarin (cmn) with three dialects: Shanghainese(wuu), Wenzhounese(wen) and Cantonese(yue).
+- Data are 140 sentences each in Mandarin (cmn) and three dialects: Shanghainese(wuu), Wenzhounese(wen) and Cantonese(yue).
 - The following punctuation are removed.
 
 ```

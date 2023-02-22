@@ -15,4 +15,6 @@ What makes each dialect different from others lexically? <br>
 Four different methods are chosen and applied. 
 
 ## Results
-The results of four methods show consistency (check each methods for details).
+- 1000 random sampling with replacement is employed for the result of every method to acquire a general distribution.
+- The distributions are all visualized by using kdeplot from [seaborn](https://seaborn.pydata.org/generated/seaborn.kdeplot.html).
+- The results of four methods show consistency (check each methods for details).

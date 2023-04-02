@@ -9,10 +9,10 @@ The unknown characters for the model in each dialect:
   wuu: {'砬', '墶', '搿', '隑', '哴', '龌', '㑚', '龊'}
   yue: {'躝', '掹', '𢱕', '埲'}
   ```
-- The benefit of using cosine similarity instead of using just fixed values for matching and mismatching is that it provides a value for every character pair based on how similar their context vector is. So that 你 ('you' in Mandarin) and 侬 ('you' in Shanghainese) get a higher matching score than 你 ('you' in Mandarin) and 伐 (genetive in Shanghainese).
+- The benefit of using cosine similarity instead of using just fixed values for matching and mismatching is that it provides a value for every character pair based on how similar their context vector is. So that 你 ('you' in Mandarin) and 侬 ('you' in Shanghainese) get a higher matching score than 你 ('you' in Mandarin) and 伐 (sentence final particle in Shanghainese and Wenzhounese).
 ## Gap penalty
 - It is set to 0 to make sure that the alignment is fully imposed by the characters' cosine similarity values (-1 to 1). <br>
-- In this way, the two strings align along the longest character substring that have highest cosine similarities (often 1.0, from the identical characters that two sentences share). 
+- In this way, the two strings align along the longest character substring that have the highest cosine similarities (often 1.0, from the identical characters that two sentences share). 
 
 ```
 Sentence Alignment:  124

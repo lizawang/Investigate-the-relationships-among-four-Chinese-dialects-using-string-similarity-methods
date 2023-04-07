@@ -5,6 +5,7 @@ Build a classifier with the four languages' sentences and make predictions with 
 sklearn: SVC, GridSearchCV, TfidfVectorizer
 - #### Model
   - SVC [(support vector classifier)](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) is used with "C=10.0" (best C value searched by using       [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html)).
+  - an ensemble of 100 of this classifier with the optimized regularization value was then was fit with the dataset using [BaggingClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html) to reduce the variance in the prediction.
 - #### Data Preprocessing
   - Both parallel data and larger non-linked data is experimented on, but here we mainly focus on the parallel 4 languages (each with 140 corresponding sentences).
   - x is the stacked sentences of all 4 languages and y is the stacked language names of the four.

@@ -12,7 +12,7 @@ What makes each dialect different from others lexically? <br>
   - punc = ["。", "，", "！", "？", "'", "\"", ",", ".", "、", "?", "「", "」"]
 
 ## Methods
-Four different methods are chosen and applied. 
+Five different methods are chosen and applied. 
 
 ## Results
 - 1000 random sampling with replacement is employed for the result of every method to acquire a general distribution.
